@@ -10,67 +10,170 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
 
     <title>Rosie Lockett | Front End Developer</title>
   </head>
   <body>
     <!-- Header -->
     <div class="hero">
+      <canvas id="canvas2"></canvas>
       <header class="header">
-        <h3>Rosie Lockett</h3>
-
+        <h3>Junior Front End Developer</h3>
         <nav>
+          <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-          <a href="#about">About</a>
+          <a href="https://github.com/rosielockett95" target="_blank">
+            Github</a
+          >
           <a href="#contact">Contact</a>
         </nav>
       </header>
       <section id="about" class="section">
         <div class="about-text">
-          <h3>Junior Front End Developer</h3>
-          <div class="name-animation">
-            <canvas id="text-canvas"></canvas>
-          </div>
-          <p>
-            I'm a junior front end developer passionate about building clean,
-            accessible, and responsive websites. I enjoy learning new
-            technologies and languages, and turning designs into real,
-            user-friendly experiences.
-          </p>
-        </div>
-      </section>
-      <section id="skills" class="skills">
-        <div class="skills-text">
-          <p>HTML</p>
-          <p>CSS</p>
-          <p>Javascript</p>
-          <p>API's</p>
-          <p>Git/Github</p>
-          <p>Node.js</p>
+          <h3>Hi! I'm</h3>
         </div>
       </section>
     </div>
+    <section class="skills-section" id="skills">
+      <h2 class="gradient-text">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <i class="devicon-html5-plain colored"></i>
+          <p>HTML</p>
+        </div>
+        <div class="skill">
+          <i class="devicon-css3-plain colored"></i>
+          <p>CSS</p>
+        </div>
+        <div class="skill">
+          <i class="devicon-javascript-plain colored"></i>
+          <p>JavaScript</p>
+        </div>
+        <div class="skill">
+          <i class="devicon-nodejs-plain colored"></i>
+          <p>Node.js</p>
+        </div>
+        <div class="skill">
+          <i class="devicon-express-original colored"></i>
+          <p>Express.js</p>
+        </div>
+        <div class="skill">
+          <i class="devicon-mongodb-plain colored"></i>
+          <p>MongoDB</p>
+        </div>
+        <div class="skill">
+          <i class="devicon-git-plain colored"></i>
+          <p>Git</p>
+        </div>
+        <div class="skill">
+          <i class="devicon-github-original colored"></i>
+          <p>GitHub</p>
+        </div>
+      </div>
+    </section>
+
     <section id="projects" class="section">
-      <h2>Projects</h2>
+      <h2 class="gradient-text">Projects</h2>
+
       <div class="project-grid">
+        <!-- Project 1 -->
         <div class="project-card">
-          <div class="left-side">
+          <div class="project-image">
             <img
-              class="commerce-project"
               src="Images/E-Commerce Project.jpeg"
-              alt="Screenshot of project"
+              alt="Screenshot of E-Commerce website project"
             />
           </div>
-          <div class="right-side">
-            <h3>E-Commerce Website</h3>
+          <div class="project-content">
+            <h3 class="gradient-text">E-Commerce Website</h3>
             <p>
-              Short description of the project, what you learned, and tech used.
+              E-Commerce website built using HTML, CSS and vanilla JavaScript.
+              Includes a photo carousel of items and add-to-cart functionality.
+              Fully responsive on all devices.
             </p>
-            <a href="#" target="_blank">Live Demo</a>
-            <a href="#" target="_blank">GitHub Repo</a>
+            <div class="links">
+              <a
+                href="https://comforting-froyo-359621.netlify.app/"
+                target="_blank"
+              >
+                Live Demo
+              </a>
+              <a
+                href="https://github.com/rosielockett95/ECommerce-Site"
+                target="_blank"
+              >
+                GitHub Repo
+              </a>
+            </div>
           </div>
         </div>
-        <!-- Add more project cards here -->
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="Images/ToDo-App.jpeg"
+              alt="Screenshot of To-Do App project"
+            />
+          </div>
+          <div class="project-content">
+            <h3 class="gradient-text">To‑Do App</h3>
+            <p>
+              To‑Do App built using HTML, CSS, Vanilla JavaScript and Node.js
+              with backend persistence, filters, drag and drop, and dark mode.
+              Fully responsive.
+            </p>
+            <div class="links">
+              <a
+                href="https://genuine-douhua-7899ca.netlify.app/"
+                target="_blank"
+              >
+                Live Demo
+              </a>
+              <a
+                href="https://github.com/rosielockett95/ToDo-App"
+                target="_blank"
+              >
+                GitHub Repo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="Images/fliixx-movie-app.jpeg"
+              alt="Screenshot of Flixx Movie App"
+            />
+          </div>
+          <div class="project-content">
+            <h3 class="gradient-text">Flixx Movie App</h3>
+            <p>
+              Movie App built using HTML, CSS, and Vanilla JavaScript. Uses the
+              TMDB API to fetch movie information. Fully responsive.
+            </p>
+            <div class="links">
+              <a
+                href="https://whimsical-piroshki-b1f0a1.netlify.app/"
+                target="_blank"
+              >
+                Live Demo
+              </a>
+              <a
+                href="https://github.com/rosielockett95/flix-app"
+                target="_blank"
+              >
+                GitHub Repo
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -78,14 +181,14 @@
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-      <h2>Contact</h2>
-      <a href="mailto:youremail@example.com">youremail@example.com</a>
+      <h2 class="gradient-text">Contact</h2>
+      <a href="mailto:rosie.lockett4@gmail.com">rosie.lockett4@gmail.com</a>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
       <p>© 2025 Rosie Lockett</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="canvas.js"></script>
   </body>
 </html>

@@ -81,6 +81,10 @@ nav {
   gap: 0.5rem;
 }
 
+.about-text > h2 {
+  display: none;
+}
+
 a {
   color: #7b4cff;
   text-decoration: none;
@@ -286,4 +290,64 @@ a:hover {
 
 .footer-text {
   padding: 1rem 2rem;
+}
+
+@media (max-width: 1600px) {
+  #canvas2 {
+    display: none;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+  .about-text > h2 {
+    display: block;
+    font-size: 8rem;
+  }
+
+  .about-text > h3 {
+    top: 20%;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .project-image img {
+    min-width: 100%;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 758px) {
+  .project-card {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-text > h2 {
+    font-size: 6rem;
+  }
+
+  .about-text > h3 {
+    font-size: 3rem;
+  }
+
+  .project-content p {
+    font-size: 0.9rem;
+  }
+
+  .project-content > h3 {
+    font-size: 1.5rem;
+  }
+
+  .links > a {
+    font-size: 0.8rem;
+  }
 }

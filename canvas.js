@@ -14,6 +14,7 @@ let mouse2 = {
   x: null,
   y: null,
   radius: 150,
+  z,
 };
 window.addEventListener("mousemove", function (event) {
   mouse2.x = event.x + canvas2.clientLeft / 2;

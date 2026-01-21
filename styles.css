@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
-  font-family: "Playfair Display", serif;
+  font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
@@ -8,11 +8,10 @@ body {
   margin: 0px;
   padding: 0px;
 }
-
 .hero {
   position: relative;
   height: 100vh;
-  background-color: #0f0f12;
+  background-color: #916c80; /* hero mauve */
 }
 
 .hero::after {
@@ -24,12 +23,13 @@ body {
   height: 150px;
   background: linear-gradient(
     to bottom,
-    rgba(15, 15, 18, 1),
-    rgba(255, 255, 255, 1)
+    rgba(145, 108, 128, 0) 0%,
+    /* fully transparent at top */ rgba(145, 108, 128, 0.5) 40%,
+    /* soft mauve in middle */ rgba(255, 255, 255, 1) 100%
+      /* fade fully into white */
   );
   pointer-events: none;
 }
-
 #canvas2 {
   position: absolute;
   top: 0;
@@ -47,12 +47,13 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #7b4cff, #b794ff);
+  /* background: linear-gradient(to bottom, #fff1e4 0%, #ffe1c6 50%, #f2c7a5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
+  color: transparent; */
   display: inline-block;
+  color: #48284a;
 }
 
 .header {
@@ -60,15 +61,17 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+  border-bottom: #ffe1c6 solid 2px;
 }
 header > h3 {
-  color: #7b4cff;
+  color: #ffe1c6;
+  text-transform: uppercase;
 }
 
 header h1 {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #111;
+  color: #48284a;
 }
 
 header span {
@@ -78,7 +81,12 @@ header span {
 }
 nav {
   display: flex;
-  gap: 0.5rem;
+  gap: 2.5rem;
+}
+
+nav a {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .about-text > h2 {
@@ -86,15 +94,17 @@ nav {
 }
 
 a {
-  color: #7b4cff;
+  color: #ffe1c6;
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s ease;
+  /* text-transform: uppercase; */
 }
 
 a:hover {
-  border-bottom-color: #7b4cff;
-  color: #7b4cff;
+  border-bottom-color: #b8a9f7;
+  color: #b8a9f7;
+  opacity: 0.6;
 }
 .skills-section,
 .about-section {
@@ -107,8 +117,8 @@ a:hover {
 .skills-section h2,
 .about-section h2 {
   font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #333;
+  margin-bottom: 3rem;
+  color: #48284a;
 }
 
 .skills-grid {
@@ -138,20 +148,20 @@ a:hover {
 .skill p {
   font-size: 1rem;
   font-weight: 500;
-  color: #333;
+  color: #48284a;
   margin: 0;
 }
 
 .skill:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0 0 6px #7b4cff);
+  filter: drop-shadow(2px 0 8px #ffc6d9);
 }
 
 #about {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 9rem;
   justify-content: center;
 }
 
@@ -177,11 +187,7 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  background: linear-gradient(90deg, #7b4cff, #b794ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  color: #48284a;
   display: inline-block;
 }
 
@@ -231,15 +237,15 @@ a:hover {
 .project-content h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #7b4cff;
+  color: #48284a;
 }
 
 .project-content p {
   font-size: 1rem;
-  line-height: 1.5;
-  color: #333333;
-
+  line-height: 1.8;
+  color: #916c80;
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
 .links {
@@ -249,10 +255,10 @@ a:hover {
 
 .links a {
   text-transform: uppercase;
-  color: black;
+  color: #916c80;
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 2px solid #7b4cff;
+  border-bottom: 2px solid #ffe1c6;
   padding-bottom: 2px;
   transition:
     color 0.3s ease,
@@ -260,7 +266,7 @@ a:hover {
 }
 
 .links a:hover {
-  color: #7b4cff;
+  color: #916c80;
   border-color: #fff;
 }
 
@@ -282,21 +288,126 @@ a:hover {
 }
 
 #contact > a {
-  color: black;
+  color: #916c80;
+
   border-bottom: none;
 }
 
 #contact > a:hover {
-  color: black;
   border-bottom: none;
-  color: #7b4cff;
+  color: #48284a;
 }
 
 .footer-text {
   padding: 1rem 2rem;
+  color: #48284a;
 }
 
-@media (max-width: 1600px) {
+/* Drop in */
+
+.margin-right {
+  margin-right: 15px;
+}
+
+.text-drop {
+  position: relative;
+  display: flex;
+  font-size: 100px;
+  font-family: arial;
+  font-weight: 900;
+}
+
+.h {
+  opacity: 0;
+  animation: drop 0.4s linear forwards;
+  color: #ffe1c6;
+}
+
+.h2 {
+  opacity: 0;
+  animation: drop 0.3s linear forwards;
+  color: #ffe1c6;
+  animation-delay: 0s;
+}
+
+.i2 {
+  opacity: 0;
+  animation: drop 0.3s linear forwards;
+  color: #ffe1c6;
+  animation-delay: 0.15s;
+}
+
+.i3 {
+  opacity: 0;
+  animation: drop 0.3s linear forwards;
+  color: #ffe1c6;
+  animation-delay: 0.3s;
+}
+
+.m1 {
+  opacity: 0;
+  animation: drop 0.3s linear forwards;
+  color: #ffe1c6;
+  animation-delay: 0.45s;
+}
+.e {
+  opacity: 0;
+  animation: drop 0.4s linear forwards 0.2s;
+  color: #ffe1c6;
+}
+
+.l {
+  opacity: 0;
+  animation: drop 0.4s linear forwards 0.4s;
+  color: #ffe1c6;
+}
+
+.l2 {
+  opacity: 0;
+  animation: drop 0.4s linear forwards 0.6s;
+  color: #ffe1c6;
+}
+
+.o {
+  opacity: 0;
+  animation: drop 0.4s linear forwards 0.8s;
+  color: #ffe1c6;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-200px) scaleY(0.9);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(0px) scaleY(1);
+    opacity: 1;
+  }
+  65% {
+    transform: translateY(-17px) scaleY(0.9);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-22px) scaleY(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) scaleY(1);
+    opacity: 1;
+  }
+}
+
+.smile {
+  opacity: 0;
+  animation: drop 0.4s linear forwards 1.2s;
+  color: #ffe1c6;
+  font-size: 90px;
+}
+
+@media (max-width: 942px) {
   /* #canvas2 {
     display: none;
   } */
@@ -323,20 +434,23 @@ a:hover {
   }
 
   .project-image img {
-    min-width: 100%;
-    max-width: 80%;
+    width: 100%;
+  }
+
+  .project-card:nth-child(even) {
+    flex-direction: row;
   }
 }
 
 @media (max-width: 758px) {
   .project-card {
-    display: block;
+    display: flex;
   }
 }
 
 @media (max-width: 400px) {
-  .about-text > h2 {
-    font-size: 6rem;
+  .text-drop {
+    font-size: 88px;
   }
 
   .about-text > h3 {
@@ -353,5 +467,9 @@ a:hover {
 
   .links > a {
     font-size: 0.8rem;
+  }
+
+  .text-drop {
+    font-size: 82px;
   }
 }

@@ -11,7 +11,7 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background-color: #916c80; /* hero mauve */
+  background-color: #916c80;
 }
 
 .hero::after {
@@ -24,9 +24,8 @@ body {
   background: linear-gradient(
     to bottom,
     rgba(145, 108, 128, 0) 0%,
-    /* fully transparent at top */ rgba(145, 108, 128, 0.5) 40%,
-    /* soft mauve in middle */ rgba(255, 255, 255, 1) 100%
-      /* fade fully into white */
+    rgba(145, 108, 128, 0.5) 40%,
+    rgba(255, 255, 255, 1) 100%
   );
   pointer-events: none;
 }
@@ -119,6 +118,21 @@ a:hover {
   font-size: 2rem;
   margin-bottom: 3rem;
   color: #48284a;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  position: relative;
+  display: inline-block;
+}
+
+.skills-section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 85px;
+  height: 3px;
+  background: linear-gradient(to right, #ffc6d9, #ffe1c6);
+  border-radius: 2px;
 }
 
 .skills-grid {
@@ -206,11 +220,24 @@ a:hover {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  position: relative;
+  display: inline-block;
 }
-
+#projects h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 138px;
+  height: 3px;
+  background: linear-gradient(to right, #ffc6d9, #ffe1c6);
+  border-radius: 2px;
+}
 .project-grid {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 5rem;
 }
 
@@ -218,15 +245,34 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
   flex-wrap: wrap;
+  flex-direction: column;
+  width: 42%;
+  padding: 2rem;
+}
+
+.pink {
+  background: #faf7f2;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(190, 104, 196, 0.18);
+}
+
+.apricot {
+  background-color: #faf7f2;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(190, 104, 196, 0.18);
+}
+
+.project-image {
+  height: 275px;
 }
 
 .project-image img {
-  width: 500px;
-  height: auto;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
 }
 
 .project-content {
@@ -242,10 +288,9 @@ a:hover {
 
 .project-content p {
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1.4;
   color: #916c80;
   margin-bottom: 1.5rem;
-  text-align: justify;
 }
 
 .links {
@@ -265,13 +310,13 @@ a:hover {
     border-color 0.3s ease;
 }
 
-.links a:hover {
-  color: #916c80;
-  border-color: #fff;
+.apricot .links a {
+  border-bottom: 2px solid #ffe1c6;
 }
 
-.project-card:nth-child(even) {
-  flex-direction: row-reverse;
+.links a:hover {
+  color: #48284a;
+  border-color: #fff;
 }
 
 .links-container {
@@ -287,9 +332,24 @@ a:hover {
   flex-direction: column;
 }
 
+.contact {
+  position: relative;
+}
+
+.contact:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 104px;
+  height: 3px;
+  background: linear-gradient(to right, #ffc6d9, #ffe1c6);
+  border-radius: 2px;
+}
+
 #contact > a {
   color: #916c80;
-
+  margin-top: 0.5rem;
   border-bottom: none;
 }
 
@@ -298,9 +358,30 @@ a:hover {
   color: #48284a;
 }
 
+.footer {
+  display: flex;
+  padding: 2rem;
+  background-color: #916c80;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer-text {
   padding: 1rem 2rem;
   color: #48284a;
+  font-size: 15px;
+}
+
+.icon {
+  width: 32px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 /* Drop in */
@@ -405,6 +486,35 @@ a:hover {
   animation: drop 0.4s linear forwards 1.2s;
   color: #ffe1c6;
   font-size: 90px;
+}
+
+@media (max-width: 1330px) {
+  .project-grid {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 55%;
+  }
+
+  #projects h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #projects h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 138px;
+    height: 3px;
+    background: linear-gradient(to right, #ffc6d9, #ffe1c6);
+    border-radius: 2px;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 942px) {

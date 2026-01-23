@@ -249,6 +249,11 @@ a:hover {
   flex-direction: column;
   width: 42%;
   padding: 2rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  overflow: hidden;
 }
 
 .pink {
@@ -273,6 +278,11 @@ a:hover {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.1);
 }
 
 .project-content {

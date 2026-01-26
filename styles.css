@@ -34,7 +34,7 @@ body {
 .hamburger-image {
   position: absolute;
   top: 13px;
-  left: 12px;
+  left: 28px;
   cursor: pointer;
 }
 
@@ -48,8 +48,8 @@ body {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 15px;
-  left: 35px;
+  top: 46px;
+  left: 11px;
   gap: 2rem;
   transition: opacity 0.3s ease;
 }

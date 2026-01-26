@@ -8,6 +8,7 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
 .hero {
   position: relative;
   height: 100vh;
@@ -29,6 +30,51 @@ body {
   );
   pointer-events: none;
 }
+
+.hamburger-image {
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  cursor: pointer;
+}
+
+.hamburger-image img {
+  width: 25px;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  left: 35px;
+  gap: 2rem;
+  transition: opacity 0.3s ease;
+}
+
+.hamburger-menu a {
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-nav {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 #canvas2 {
   position: absolute;
   top: 0;
@@ -61,6 +107,7 @@ body {
   justify-content: space-between;
   padding: 1rem 2rem;
   border-bottom: #ffe1c6 solid 2px;
+  position: relative;
 }
 header > h3 {
   color: #ffe1c6;
@@ -532,6 +579,7 @@ a:hover {
     width: 68%;
   }
 }
+
 @media (max-width: 942px) {
   /* #canvas2 {
     display: none;
@@ -553,11 +601,12 @@ a:hover {
   }
 
   .header {
-    flex-direction: column;
+    flex-direction: row;
+    border-bottom: none;
   }
 
   nav {
-    flex-wrap: wrap;
+    display: none;
   }
 
   .project-image img {
@@ -580,6 +629,10 @@ a:hover {
   .project-image img {
     width: 100%;
     object-fit: contain;
+  }
+
+  .text-drop {
+    margin-top: 24px;
   }
 }
 

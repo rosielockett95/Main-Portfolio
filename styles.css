@@ -139,6 +139,16 @@ nav a {
   display: none;
 }
 
+.about-description-container {
+  max-width: 800px;
+}
+
+.about-description-text {
+  text-align: center;
+  color: #ffe1c6;
+  line-height: 1.8;
+}
+
 a {
   color: #ffe1c6;
   text-decoration: none;

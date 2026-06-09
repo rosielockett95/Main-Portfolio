@@ -232,7 +232,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 9rem;
+  padding: 4rem;
   justify-content: center;
 }
 
@@ -647,6 +647,9 @@ a:hover {
 }
 
 @media (max-width: 400px) {
+  #about {
+    padding: 2rem;
+  }
   .text-drop {
     font-size: 88px;
   }

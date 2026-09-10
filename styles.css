@@ -437,7 +437,7 @@ a:hover {
 
 .footer-text {
   padding: 1rem 2rem;
-  color: #48284a;
+  color: #ffe1c6;
   font-size: 15px;
 }
 
@@ -449,6 +449,10 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
+
+.icon-container img {
+  width: 32px;
 }
 
 /* Drop in */
